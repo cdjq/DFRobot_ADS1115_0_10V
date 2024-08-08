@@ -4,8 +4,8 @@
  * @copyright    Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license      The MIT License (MIT)
  * @author [lr](rong.li@dfrobot.com)
- * @version V1.0
- * @date 2024-07-19
+ * @version V1.0.0
+ * @date 2024-07-23
  * @url *
  */
 #include <DFRobot_ADS1115_0_10V.h>

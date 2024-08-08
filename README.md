@@ -68,4 +68,4 @@ RaspberryPi4       |      √       |                 |             |
 
 ## Credits
 
-Written by lr(), 2024. (Welcome to our [website](https://www.dfrobot.com/))
+Written by lr(rong.li@dfrobot.com), 2024. (Welcome to our [website](https://www.dfrobot.com/))

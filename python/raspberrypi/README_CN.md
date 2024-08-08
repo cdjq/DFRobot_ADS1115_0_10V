@@ -67,4 +67,4 @@ python get_advalue.py
 
 ## 创作者
 
-Written by lr(), 2024. (Welcome to our website)
+Written by lr(rong.li@dfrobot.com), 2024. (Welcome to our website)

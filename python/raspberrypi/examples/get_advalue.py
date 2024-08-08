@@ -6,7 +6,7 @@
     @license The MIT License (MIT)
     @author [lr](rong.li@dfrobot.com)
     @version V1.0.0
-    @date 2024-07-19
+    @date 2024-07-23
     @url https://github.com/DFRobot/DFRobot_ADS1115_0_10V
 '''
 import time
