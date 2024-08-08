@@ -6,7 +6,7 @@
  * @author [LR]<rong.li@dfrobot.com>
  * @version V1.0.0
  * @date 2024-07-19
- * @url *
+ * @url https://github.com/DFRobot/DFRobot_ADS1115_0_10V
  */
 #include"DFRobot_ADS1115_0_10V.h"
 
