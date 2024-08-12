@@ -56,6 +56,7 @@ python get_advalue.py
 | RaspberryPi4 | √         |            |          |         |
 
 - Python version
+
 | Python  | Work Well | Work Wrong | Untested | Remarks |
 | ------- | --------- | ---------- | -------- | ------- |
 | Python2 | √         |            |          |         |
