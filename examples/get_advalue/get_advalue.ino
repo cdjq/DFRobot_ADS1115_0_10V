@@ -11,7 +11,7 @@
 #include <DFRobot_ADS1115_0_10V.h>
 
 //use I2C for communication, but use the serial port for communication if the line of codes were masked
-//#define I2C_COMMUNICATION 
+#define I2C_COMMUNICATION 
 
 #define MODULE_I2C_ADDRESS 0x4A
 #ifdef  I2C_COMMUNICATION

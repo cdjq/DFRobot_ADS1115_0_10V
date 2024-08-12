@@ -53,6 +53,8 @@ Arduino Uno        |      √       |                 |             |
 Arduino MEGA2560   |      √       |                 |             |
 Arduino Leonardo   |      √       |                 |             |
 FireBeetle-ESP32   |      √       |                 |             |
+FireBeetle-ESP8266 |      √       |                 |             |
+FireBeetle-M0      |      √       |                 |             |
 RaspberryPi4       |      √       |                 |             |
 
 ## History
