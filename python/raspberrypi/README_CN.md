@@ -37,11 +37,11 @@ python get_advalue.py
   def begin(void);
 
 '''!
-@fn get_value(uint8_t channel)
-@brief 获取电压值
-@param 选择通道1/通道2 
-@note 只能输入1或2，其他值会一直返回0
-@return 电压值
+  @fn get_value(uint8_t channel)
+  @brief 获取电压值
+  @param 选择通道1/通道2 
+  @note 只能输入1或2，其他值会一直返回0
+  @return 电压值
 '''
   def get_value(uint8_t channel);
 

@@ -6,16 +6,17 @@
  * @author [lr](rong.li@dfrobot.com)
  * @version V1.0.0
  * @date 2024-07-23
- * @url *
+ * @url https://github.com/DFRobot/DFRobot_ADS1115_0_10V
  */
 #include <DFRobot_ADS1115_0_10V.h>
 
 //use I2C for communication, but use the serial port for communication if the line of codes were masked
 //#define I2C_COMMUNICATION 
 
-#define MODULE_I2C_ADDRESS 0x48
+#define MODULE_I2C_ADDRESS 0x4A
 #ifdef  I2C_COMMUNICATION
   DFRobot_ADS1115_I2C ads1115(&Wire, MODULE_I2C_ADDRESS);
+  
  /* ---------------------------------------------------------------------------------------------------------------------
   *    board   |             MCU                | Leonardo/Mega2560/M0 |    UNO    | ESP8266 | ESP32 |  microbit  |   m0  |
   *     VCC    |            3.3V/5V             |        VCC           |    VCC    |   VCC   |  VCC  |     X      |  vcc  |
@@ -32,25 +33,34 @@
 #else
   DFRobot_ADS1115_UART ads1115(&Serial1);
 #endif
- 
+
 void setup() {
     Serial.begin(9600);
-    Serial.println("star!");
     while (!ads1115.begin())
     {
-      Serial.println("EEROR!");
+      Serial.println(" Error, please check connection and mode!");
       delay(1000);  
     }  
 }
 
 void loop() {
   double data;
-  char buffer1[30];
-  char buffer2[6];
-  unsigned char channel = 2;
+  unsigned char channel = 1;
   data= ads1115.get_value(channel);
-  dtostrf(data, 6, 2, buffer2); // 6 is the total width and 2 is the number of decimal places
-  sprintf(buffer1, "channel%d adValue:%s mv",channel,buffer2);
-  Serial.println(buffer1);
-  delay(100);
+  Serial.print(" channel:");
+  Serial.print(channel);
+  Serial.print(" adValue::");
+  Serial.print(data);
+  Serial.println("mv");
+
+//  delay(1000);
+  channel = 2;
+  data= ads1115.get_value(channel);
+  Serial.print(" channel:");
+  Serial.print(channel);
+  Serial.print(" adValue::");
+  Serial.print(data);
+  Serial.println("mv");
+
+//  delay(1000);
 }

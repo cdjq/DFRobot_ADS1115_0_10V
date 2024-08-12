@@ -10,15 +10,20 @@
  */
 #include"DFRobot_ADS1115_0_10V.h"
 
+#ifdef DEBUG  
+#define LOG(msg) std::cout << msg << std::endl  
+#else  
+#define LOG(msg) // No debugging information is output  
+#endif  
+
 
 DFRobot_ADS1115::DFRobot_ADS1115()
 {
 }
 
-
 int DFRobot_ADS1115::begin(void)
 {
-	return 1;
+	return 0;
 }
 
 double DFRobot_ADS1115::get_value(uint8_t channel)
@@ -56,7 +61,19 @@ bool DFRobot_ADS1115_UART::begin(void)
 #else
   _serial->begin(_baud);  
 #endif
-	return 1;
+	_serial->write("AT\r\n");
+	size_t i=0;
+	uint8_t buf[5]={0};
+	uint32_t nowtime = millis();
+	while (millis() - nowtime < 200) {
+		while (_serial->available()) {
+			buf[i++] = _serial->read();
+			if((strcmp("OK\r\n",(char *)buf)==0)&&(i==4))
+				return 1;
+		} 
+		if(i==4)return 0;;
+	}
+	return 0;
 }
 
 void DFRobot_ADS1115_UART::writeReg(uint8_t reg, void* pBuf, size_t size)
@@ -108,6 +125,7 @@ DFRobot_ADS1115_I2C::DFRobot_ADS1115_I2C(TwoWire* Wire, uint8_t MODULE_I2C_ADDRE
 bool DFRobot_ADS1115_I2C::begin(void){
 	_Wire->begin();
 	_Wire->beginTransmission(deviceAddr);
+//	_Wire->setClock(400000);
 	if(_Wire->endTransmission())
 		return 0;
 	return 1;	
@@ -122,6 +140,7 @@ void DFRobot_ADS1115_I2C:: writeReg(uint8_t reg, void* pBuf, size_t size)
 		_Wire->write(_pBuf[i]);
 		_Wire->endTransmission();
  	}
+	delay(50);
 }
 
 void DFRobot_ADS1115_I2C:: readReg(uint8_t reg, void* pBuf, size_t size)

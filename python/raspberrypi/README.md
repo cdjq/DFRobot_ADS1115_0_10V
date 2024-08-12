@@ -48,19 +48,16 @@ python get_advalue.py
 ```
 
 ## Compatibility
-
-MCU                | Work Well    |   Work Wrong    | Untested    | Remarks
------------------- | :----------: | :-------------: | :---------: | :----:
-Arduino Uno        |      √       |                 |             |
-Arduino MEGA2560   |      √       |                 |             |
-Arduino Leonardo   |      √       |                 |             |
-FireBeetle-ESP32   |      √       |                 |             |
-Micro:bit          |      √       | nonsupport uart |             |
-RaspberryPi4       |      √       |                 |             |
+|              |           |            |          |         |
+| ------------ | --------- | ---------- | -------- | ------- |
+| MCU          | Work Well | Work Wrong | Untested | Remarks |
+| RaspberryPi2 |           |            | √        |         |
+| RaspberryPi3 |           |            | √        |         |
+| RaspberryPi4 | √         |            |          |         |
 
 - Python version
-| ------- | --------- | ---------- | -------- | ------- |
 | Python  | Work Well | Work Wrong | Untested | Remarks |
+| ------- | --------- | ---------- | -------- | ------- |
 | Python2 | √         |            |          |         |
 | Python3 | √         |            |          |         |
 

@@ -55,13 +55,6 @@ Arduino Leonardo   |      √       |                 |             |
 FireBeetle-ESP32   |      √       |                 |             |
 RaspberryPi4       |      √       |                 |             |
 
-- Python version
-| ------- | --------- | ---------- | -------- | ------- |
-| Python  | Work Well | Work Wrong | Untested | Remarks |
-| Python2 | √         |            |          |         |
-| Python3 | √         |            |          |         |
-
-
 ## History
 
 - 2024/07/23 - Version 1.0.0 released.
