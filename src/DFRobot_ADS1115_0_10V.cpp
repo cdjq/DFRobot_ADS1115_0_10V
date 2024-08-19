@@ -26,7 +26,7 @@ int DFRobot_ADS1115::begin(void)
 	return 0;
 }
 
-double DFRobot_ADS1115::get_value(uint8_t channel)
+double DFRobot_ADS1115::getValue(uint8_t channel)
 {
 	uint8_t pBuf[3]={0};
 	double ad_value=0;

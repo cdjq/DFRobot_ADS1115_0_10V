@@ -46,7 +46,7 @@ void setup() {
 void loop() {
   double data;
   unsigned char channel = 1;
-  data= ads1115.get_value(channel);
+  data= ads1115.getValue(channel);
   Serial.print(" channel:");
   Serial.print(channel);
   Serial.print(" adValue::");
@@ -55,7 +55,7 @@ void loop() {
 
 //  delay(1000);
   channel = 2;
-  data= ads1115.get_value(channel);
+  data= ads1115.getValue(channel);
   Serial.print(" channel:");
   Serial.print(channel);
   Serial.print(" adValue::");

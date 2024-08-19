@@ -70,7 +70,7 @@ public:
    * @param channel Choose channel 1 or channel 2
    * @return Voltage values
    */
-  double get_value(uint8_t channel);
+  double getValue(uint8_t channel);
   DFRobot_ADS1115();
 };
 
