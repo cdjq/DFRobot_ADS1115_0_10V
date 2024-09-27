@@ -3,6 +3,11 @@
 
 The product is a module that integrates the ADS1115 chip. The I2C and UART communication modes can be selected by the dial switch, and the I2C address of the module can also be switched by the dial switch. The external device can obtain two sets of voltage data with a resolution of 0.01mv through the gravity interface. This module can be used to accurately measure the DC voltage from 0 to 10v.
 
+
+![effect picture](../../resources/images/DFR1184-1.png) 
+
+## Product Link(https://www.dfrobot.com/)
+
 ## Table of Contents
 
 * [Summary](#Summary)

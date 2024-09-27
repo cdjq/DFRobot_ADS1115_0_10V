@@ -2,7 +2,9 @@
 - [English Version](./README.md)
 
 该产品是一款集成了ADS1115芯片的模块。可通过拨码开关的方式选择I2C、UART通讯方式，也可以通过拨码开关切换模块的I2C地址。外部设备通过gravity接口可以分别获取两组分辨率为0.01mv的电压数据。该模块可以用来精确测量0-10v的直流电压。
+![正面svg效果图](../../resources/images/DFR1184-1.png) 
 
+## 产品链接(https://www.dfrobot.com.cn/)
 
 ## 目录
 
